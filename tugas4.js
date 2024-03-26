@@ -1,9 +1,9 @@
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => { // cek status server
-        if (!res.ok) { // Jika status respons bukan OK
-            throw new Error('Ada error nih') // Membuat error baru
+        if (!res.ok) { 
+            throw new Error('Ada error nih') 
         }
-        return res.json() // Jika status respons OK, proses data
+        return res.json() 
     })
     .then(data => { // menampilkan data name menggunakan map
         data.map((item) => {

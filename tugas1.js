@@ -25,20 +25,18 @@ const startAPP = async () => {
 
 }
 startAPP()
-
-
-// cariHariKerja('minggu')
-//     .then((res) => {
-//         console.log(`Hari ${res} merupakan hari kerja`)
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-
 // Try Catch:
 
 // Jika promise terpenuhi (resolve), hasilnya akan disimpan dalam variabel hasil dan kode di dalam blok try akan dijalankan
 // Jika promise ditolak (reject), eksekusi akan beralih ke blok catch / menangkap error
+
+cariHariKerja('Minggu')
+    .then((res) => {
+        console.log(`Hari ${res} merupakan hari kerja`)
+    })
+    .catch((err) => {
+        console.log(err.message)
+    })
 
 // Then Catch:
 
